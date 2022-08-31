@@ -1,5 +1,5 @@
 body{
-   color:  #49445a;
+    color:  #49445a;
 }
 h1{
     padding-top: 10px;
@@ -7,9 +7,10 @@ h1{
 }
 img{
     border-radius: 10px;
-}
+}    
 #main{
     padding-top: 10px;
+    min-height: calc(100vh - 70px);
 }
 #container{
     display: flex;
