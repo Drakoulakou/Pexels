@@ -20,8 +20,7 @@ function searchPhotos() {
             var content = "";
             res.photos.forEach(photo => {
                 content += ` <img src=${photo.src.small}></img> `;
-            });{
-            }
+            });
             document.getElementById("main").innerHTML = content;
         })
 }
