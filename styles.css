@@ -8,7 +8,7 @@ h1{
 img{
     border-radius: 10px;
 }    
-#main{
+#main, #mainVideo{
     padding-top: 10px;
     min-height: calc(100vh - 70px);
 }
@@ -18,7 +18,7 @@ img{
     align-items: center;
     padding: 30px;
 }
-#search{
+#search, #searchVideo{
     width: 190px;
     height: 50px;
     border-radius: 10px;
@@ -29,7 +29,7 @@ img{
     flex-direction: row;
     margin: 10px 0 20px 0;
 }
-#button{
+#button, #buttonVideo{
       background-color: #fff;
       border: 0 solid #e2e8f0;
       border-radius: 1.5rem;
@@ -53,7 +53,7 @@ img{
       margin: 0 15px 0 10px;
     }
     
-#button:hover {
+#button:hover,  #buttonVideo:hover {
       background-color: #1e293b;
       color: #fff;
     }
