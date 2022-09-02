@@ -1,5 +1,3 @@
-
-
 var button = document.getElementById("button");
 var key = "563492ad6f917000010000015c63247b52f54d439be26255ab12573f"
 
@@ -25,3 +23,30 @@ function searchPhotos() {
         })
 }
 
+var buttonVideo = document.getElementById('buttonVideo');
+
+buttonVideo.addEventListener("click", searchVideos);
+
+function searchVideos(){
+    var searchVideo = document.getElementById("searchVideo").value;
+
+    fetch('https://api.pexels.com/videos/search?query=' + searchVideo, {
+        headers: new Headers({    
+            'Authorization': key, 
+        }),
+        method:'GET'
+    })
+    .then(response => response.json())
+    .then(response => {
+        console.log(response)
+        var contentVideo = '';
+        response.videos.forEach(video=>{
+            contentVideo += 
+            `<video width="320" height="240" controls>
+            <source src="${video.video_files[0].link}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>`
+        });
+        document.getElementById('mainVideo').innerHTML = contentVideo;
+    })
+}
